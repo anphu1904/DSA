@@ -8,4 +8,5 @@ def thap_ha_noi(so_dia, cot_nguon, cot_trung_gian, cot_dich):
 
 n = int(input("Nhập số đĩa: "))
 print("Các bước chuyển đĩa:")
+
 thap_ha_noi(n, 'A', 'B', 'C')
