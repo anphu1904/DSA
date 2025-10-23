@@ -9,4 +9,5 @@ def hoan_vi(mang, i):
 
 mang_so = [1, 2, 3]
 print("Các hoán vị của mảng:", mang_so)
+
 hoan_vi(mang_so, 0)
