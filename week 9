@@ -1,0 +1,35 @@
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def append(self, data):
+        new_node = Node(data)
+        if not self.head:
+            self.head = new_node
+            return
+        current = self.head
+        while current.next:
+            current = current.next
+        current.next = new_node
+
+    def tim_kiem_tuan_tu(self, x):
+        current = self.head
+        index = 0
+        while current:
+            if current.data == x:
+                return index
+            current = current.next
+            index += 1
+        return -1
+
+# --- Chạy trực tiếp ---
+ds = LinkedList()
+for i in [10, 20, 30, 40]:
+    ds.append(i)
+print("Tìm 30:", ds.tim_kiem_tuan_tu(30))
+print("Tìm 50:", ds.tim_kiem_tuan_tu(50))
